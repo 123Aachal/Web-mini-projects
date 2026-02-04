@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blood Donation Camp</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+}
+
+/* ---------- HEADER ---------- */
+header{
+    background:#b11226;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* ---------- NAVBAR ---------- */
+nav{
+    background:#8b0000;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* ---------- SECTIONS ---------- */
+section{
+    padding:30px;
+    width:90%;
+    margin:auto;
+}
+
+h2{
+    color:#b11226;
+    margin-bottom:15px;
+}
+
+/* ---------- CARDS ---------- */
+.card{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- FORM ---------- */
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#b11226;
+    color:white;
+    border:none;
+    padding:12px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#8b0000;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🩸 Blood Donation Camp</h1>
+    <p>Donate Blood • Save Lives</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#details">Camp Details</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="card">
+        <h2>About the Camp</h2>
+        <p>
+            Blood Donation Camp is organized to encourage people to donate blood
+            and help save lives. One unit of donated blood can save up to three lives.
+            Your small effort can make a big difference.
+        </p>
+    </div>
+</section>
+
+<section id="details">
+    <div class="card">
+        <h2>Camp Details</h2>
+        <p><strong>Date:</strong> 20 March 2026</p>
+        <p><strong>Time:</strong> 9:00 AM – 4:00 PM</p>
+        <p><strong>Venue:</strong> College Auditorium, Bhusawal</p>
+        <p><strong>Organized by:</strong> NSS Unit & Health Department</p>
+    </div>
+</section>
+
+<section id="eligibility">
+    <div class="card">
+        <h2>Eligibility Criteria</h2>
+        <ul>
+            <li>Age between 18 – 60 years</li>
+            <li>Minimum weight: 50 kg</li>
+            <li>Hemoglobin level above 12.5 g/dl</li>
+            <li>Good physical health</li>
+            <li>No major illness in last 6 months</li>
+        </ul>
+    </div>
+</section>
+
+<section id="register">
+    <div class="card">
+        <h2>Donor Registration</h2>
+
+        <form>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Age</label>
+            <input type="number" placeholder="Enter age" required>
+
+            <label>Blood Group</label>
+            <select required>
+                <option>Select blood group</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option>
+                <option>O+</option><option>O-</option>
+            </select>
+
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="Enter mobile number" required>
+
+            <button type="submit">Register as Donor</button>
+        </form>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> bloodcamp@college.edu</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Address:</strong> College Campus, Bhusawal</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Blood Donation Camp | A Drop of Blood Can Save a Life ❤️</p>
+</footer>
+
+</body>
+</html>

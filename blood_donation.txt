@@ -1,0 +1,375 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blood Donation Camp</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8}
+header{background:#b11226;color:white;text-align:center;padding:25px}
+nav{background:#8b0000;padding:10px;text-align:center}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+section{padding:30px;text-align:center}
+footer{background:#8b0000;color:white;text-align:center;padding:15px}
+</style>
+</head>
+
+<body>
+    <a href="users.html">Registered Users</a>
+<header>
+<h1>🩸 Blood Donation Camp</h1>
+<p>Donate Blood • Save Lives</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="details.html">Camp Details</a>
+<a href="eligibility.html">Eligibility</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Welcome</h2>
+<p>Your blood donation can save many lives. Join our blood donation camp and be a hero.</p>
+</section>
+
+<footer>
+© 2026 Blood Donation Camp
+</footer>
+</body>
+</html>
+
+about.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Camp</title>
+<style>
+body{font-family:Arial;background:#f4f6f8}
+nav{background:#8b0000;padding:10px;text-align:center}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+section{padding:30px}
+</style>
+</head>
+
+<body>
+<nav>
+    
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="details.html">Camp Details</a>
+<a href="eligibility.html">Eligibility</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>About the Camp</h2>
+<p>
+This Blood Donation Camp is organized to spread awareness about blood donation
+and help patients in need. One donation can save up to three lives.
+</p>
+</section>
+</body>
+</html>
+
+details.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Camp</title>
+<style>
+body{font-family:Arial;background:#f4f6f8}
+nav{background:#8b0000;padding:10px;text-align:center}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+section{padding:30px}
+</style>
+</head>
+
+<body>
+<nav>
+    
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="details.html">Camp Details</a>
+<a href="eligibility.html">Eligibility</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>About the Camp</h2>
+<p>
+This Blood Donation Camp is organized to spread awareness about blood donation
+and help patients in need. One donation can save up to three lives.
+</p>
+</section>
+</body>
+</html>
+
+eligibility.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eligibility</title>
+<style>
+body{font-family:Arial;background:#f4f6f8}
+nav{background:#8b0000;padding:10px;text-align:center}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+section{padding:30px}
+</style>
+</head>
+
+<body>
+<nav>
+    <a href="users.html">Registered Users</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="details.html">Camp Details</a>
+<a href="eligibility.html">Eligibility</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Eligibility Criteria</h2>
+<ul>
+<li>Age between 18 – 60 years</li>
+<li>Weight above 50 kg</li>
+<li>Good health condition</li>
+<li>No major illness</li>
+</ul>
+</section>
+</body>
+</html>
+
+register.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Donor</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f8;
+}
+.container{
+    width:400px;
+    background:white;
+    margin:50px auto;
+    padding:20px;
+    border-radius:8px;
+}
+h2{
+    text-align:center;
+    color:#b11226;
+}
+input,select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#b11226;
+    color:white;
+    border:none;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>🩸 Donor Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="number" id="age" placeholder="Age">
+
+<select id="blood">
+<option value="">Select Blood Group</option>
+<option>A+</option><option>A-</option>
+<option>B+</option><option>B-</option>
+<option>O+</option><option>O-</option>
+<option>AB+</option><option>AB-</option>
+</select>
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<button onclick="registerUser()">Register</button>
+
+<p style="text-align:center;">
+<a href="users.html">View Registered Users</a>
+</p>
+</div>
+
+<script>
+function registerUser(){
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let blood = document.getElementById("blood").value;
+    let mobile = document.getElementById("mobile").value;
+
+    if(name=="" || age=="" || blood=="" || mobile==""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("donors")) || [];
+
+    users.push({
+        name:name,
+        age:age,
+        blood:blood,
+        mobile:mobile
+    });
+
+    localStorage.setItem("donors", JSON.stringify(users));
+
+    alert("Donor Registered Successfully!");
+    document.getElementById("name").value="";
+    document.getElementById("age").value="";
+    document.getElementById("blood").value="";
+    document.getElementById("mobile").value="";
+}
+</script>
+
+</body>
+</html>
+
+contact.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<style>
+body{font-family:Arial;background:#f4f6f8}
+nav{background:#8b0000;padding:10px;text-align:center}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+section{padding:30px}
+</style>
+</head>
+
+<body>
+<nav>
+    <a href="users.html">Registered Users</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="details.html">Camp Details</a>
+<a href="eligibility.html">Eligibility</a>
+<a href="register.html">Register</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Contact Us</h2>
+<p>Email: bloodcamp@college.edu</p>
+<p>Phone: +91 9876543210</p>
+</section>
+</body>
+</html>
+
+users.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registered Donors</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f8;
+}
+.container{
+    width:90%;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+h2{
+    text-align:center;
+    color:#b11226;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+th{
+    background:#b11226;
+    color:white;
+}
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>🩸 Registered Blood Donors</h2>
+
+<table>
+<thead>
+<tr>
+<th>Sr No</th>
+<th>Name</th>
+<th>Age</th>
+<th>Blood Group</th>
+<th>Mobile</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody>
+</table>
+
+<p style="text-align:center;">
+<a href="register.html">Add New Donor</a>
+</p>
+</div>
+
+<script>
+function loadUsers(){
+    let users = JSON.parse(localStorage.getItem("donors")) || [];
+    let tbody = document.getElementById("tableBody");
+    tbody.innerHTML="";
+
+    users.forEach((user,index)=>{
+        tbody.innerHTML += `
+        <tr>
+            <td>${index+1}</td>
+            <td>${user.name}</td>
+            <td>${user.age}</td>
+            <td>${user.blood}</td>
+            <td>${user.mobile}</td>
+            <td><button onclick="deleteUser(${index})">Delete</button></td>
+        </tr>`;
+    });
+}
+
+function deleteUser(index){
+    let users = JSON.parse(localStorage.getItem("donors"));
+    users.splice(index,1);
+    localStorage.setItem("donors", JSON.stringify(users));
+    loadUsers();
+}
+
+loadUsers();
+</script>
+
+</body>
+</html>
+
