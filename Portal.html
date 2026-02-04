@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Portal</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #34495e;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Portal</h1>
+    <p>Welcome to the Student Information System</p>
+</header>
+
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#courses">Courses</a>
+    <a href="#notices">Notices</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="profile" class="card">
+    <h2>Student Profile</h2>
+    <p><strong>Name:</strong> Aachal</p>
+    <p><strong>Course:</strong> MCA</p>
+    <p><strong>Semester:</strong> III</p>
+    <p><strong>Roll No:</strong> 23MCA101</p>
+</section>
+
+<section id="courses" class="card">
+    <h2>Enrolled Courses</h2>
+    <ul>
+        <li>Web Technologies</li>
+        <li>Data Structures</li>
+        <li>Machine Learning</li>
+        <li>Cloud Computing</li>
+    </ul>
+</section>
+
+<section id="notices" class="card">
+    <h2>Notice Board</h2>
+    <ul>
+        <li>📢 Internal exams start from 15 March</li>
+        <li>📢 Project submission last date: 25 March</li>
+        <li>📢 Seminar on AI this Friday</li>
+    </ul>
+</section>
+
+<section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: student@college.edu</p>
+    <p>Phone: +91 9876543210</p>
+</section>
+
+<footer>
+    <p>© 2026 Student Portal | Designed using HTML & CSS</p>
+</footer>
+
+</body>
+</html>
