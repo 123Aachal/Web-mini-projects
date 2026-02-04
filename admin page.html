@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin & Student Portal</title>
+
+<style>
+/* ---------- COMMON STYLES ---------- */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,#4facfe,#00f2fe);
+}
+
+a{
+    text-decoration:none;
+    color:#0077cc;
+}
+
+.container{
+    width:360px;
+    background:#fff;
+    margin:60px auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#2c3e50;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#4facfe;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00c6ff;
+}
+
+.links{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* ---------- PASSWORD SHOW / HIDE (CSS ONLY) ---------- */
+.pass-box{
+    position:relative;
+}
+
+.pass-box input[type="password"],
+.pass-box input[type="text"]{
+    padding-right:40px;
+}
+
+.show-pass{
+    position:absolute;
+    right:10px;
+    top:12px;
+    font-size:14px;
+}
+
+.toggle{
+    display:none;
+}
+
+.toggle:checked ~ .pass{
+    display:block;
+}
+
+.toggle:checked ~ .pass-hidden{
+    display:none;
+}
+
+.pass{
+    display:none;
+}
+
+/* ---------- DASHBOARD ---------- */
+.dashboard{
+    width:90%;
+    background:#fff;
+    margin:30px auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+nav{
+    background:#2c3e50;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.card{
+    background:#f4f6f8;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+/* ---------- HIDE / SHOW PAGES ---------- */
+section{
+    display:none;
+}
+
+section:target{
+    display:block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= ADMIN LOGIN ================= -->
+<section id="admin">
+<div class="container">
+    <h2>👨‍💼 Admin Login</h2>
+    <label>Admin ID</label>
+    <input type="text" placeholder="Enter admin id">
+
+    <label>Password</label>
+    <div class="pass-box">
+        <input type="password" class="pass-hidden" placeholder="Password">
+        <input type="text" class="pass" placeholder="Password">
+        <input type="checkbox" class="toggle" id="adminPass">
+        <label for="adminPass" class="show-pass">👁</label>
+    </div>
+
+    <a href="#dashboard"><button>Login</button></a>
+
+    <div class="links">
+        <a href="#student">Student Login</a>
+    </div>
+</div>
+</section>
+
+<!-- ================= STUDENT LOGIN ================= -->
+<section id="student">
+<div class="container">
+    <h2>🎓 Student Login</h2>
+
+    <label>Username</label>
+    <input type="text" placeholder="Enter username">
+
+    <label>Password</label>
+    <div class="pass-box">
+        <input type="password" class="pass-hidden" placeholder="Password">
+        <input type="text" class="pass" placeholder="Password">
+        <input type="checkbox" class="toggle" id="studPass">
+        <label for="studPass" class="show-pass">👁</label>
+    </div>
+
+    <a href="#dashboard"><button>Login</button></a>
+
+    <div class="links">
+        <p><a href="#register">Create Account</a></p>
+        <p><a href="#admin">Admin Login</a></p>
+    </div>
+</div>
+</section>
+
+<!-- ================= REGISTRATION ================= -->
+<section id="register">
+<div class="container">
+    <h2>📝 Registration</h2>
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Create password">
+
+    <label>Confirm Password</label>
+    <input type="password" placeholder="Confirm password">
+
+    <a href="#student"><button>Register</button></a>
+
+    <div class="links">
+        <a href="#student">Back to Login</a>
+    </div>
+</div>
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+<section id="dashboard">
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#profile">Profile</a>
+    <a href="#courses">Courses</a>
+    <a href="#logout">Logout</a>
+</nav>
+
+<div class="dashboard">
+    <h2>📊 Student Portal Dashboard</h2>
+
+    <div class="card">
+        <h3>👤 Profile</h3>
+        <p>Name: Aachal</p>
+        <p>Course: MCA</p>
+        <p>Semester: III</p>
+    </div>
+
+    <div class="card">
+        <h3>📚 Courses</h3>
+        <ul>
+            <li>Web Technologies</li>
+            <li>Machine Learning</li>
+            <li>Cloud Computing</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📢 Notices</h3>
+        <p>Project submission: 25 March</p>
+        <p>Internal exams from 15 March</p>
+    </div>
+</div>
+</section>
+
+<!-- ================= LOGOUT ================= -->
+<section id="logout">
+<div class="container">
+    <h2>✅ Logged Out</h2>
+    <p style="text-align:center;">You have successfully logged out.</p>
+    <a href="#student"><button>Login Again</button></a>
+</div>
+</section>
+
+<!-- DEFAULT PAGE -->
+<script>
+location.hash = "#student";
+</script>
+
+</body>
+</html>
